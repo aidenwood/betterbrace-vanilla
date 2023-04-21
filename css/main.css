@@ -1,0 +1,116 @@
+/* hide on devices */
+@media screen and (min-width: 1199px) {
+  .no-desk {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .no-mobile {
+    display: none;
+  }
+}
+
+.header-std {
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+
+#card {
+  padding: 30px 20px;
+  background: #f2f2f2;
+  color: #000;
+}
+
+.lrg-card {
+  height: 600px;
+    max-height: 45vh;
+    width: 600px;
+    max-width: 60vw;
+}
+@media screen and (max-width: 992px) {
+  .lrg-card {
+    max-height: 55vh;
+    max-width: 80vw;
+  }
+}
+
+.med-card {
+  height: 450px;
+}
+
+
+.sml-card {
+  min-width: 325px;
+  width: 27.5%;
+  max-width: 465px;
+}
+
+
+#mediumRow {
+  height: 350px;
+}
+
+#largeRow {
+  height: 450px;
+  min-height: 45vh;
+  max-height: 55vh;
+  margin-bottom: 90px;
+}
+
+.carousel-cell {
+  margin-right: 10px;
+  max-width: 90vw;
+  counter-increment: gallery-cell;
+  background: #f2f2f200;
+  transition: all 0.3s ease;
+}
+
+.carousel-cell img {
+  object-position: center;
+  min-width: 100%;
+}
+
+/* CSSTricks scroll animation post - uses small js in head to connect to scroll variable */
+.scroll-spin {
+  position: fixed; /* make sure it stays put so we can see it! */
+
+  animation: rotate 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+
+/* Custom classes and ids */
+#headerArea {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background: #f2f2f220;
+}
+
+#headerLogo {
+  filter: drop-shadow(0px 0px 10px #ffffff75);
+}
+
+
+/* PayPal fix design */
+.cf-paypal-buttons cloudflare-app {
+  padding: 30px 0px !important;
+  justify-content: start !important;  
+}
+
+.cf-paypal-buttons cf-button-container {
+  margin-right: 1.25em !important;
+}
+
+.cf-paypal-buttons button.paypal-button .paypal-button-logo, .cf-paypal-buttons button.paypal-button .paypal-button-content {
+  height: 45px !important; 
+}
+
+.cf-paypal-buttons button.paypal-button .paypal-button-logo {
+  height: 45px !important;
+}
+
+.cf-paypal-buttons cf-item-name {
+  font-size: 1.25em !important;
+}
